@@ -1,0 +1,109 @@
+/* ------------------------------- responsive ------------------------------- */
+
+/* desktop */
+@media only screen and (min-width: 900px) {
+    .item-box {
+        width: 31.3%;
+    }
+}
+
+
+/* tablet */
+@media only screen and (max-width: 900px ) and (min-width: 600px) {
+    .item-box {
+        width: 48%;
+    }
+}
+
+
+/* mobile */
+@media only screen and (max-width:600px) {
+    .item-box {
+        width:98%;
+    }
+}
+
+
+/* ---------- html ---------------- */
+
+h1 {
+    font-family:'Noto Sans', sans-serif;
+    font-weight:600;
+    text-transform:uppercase;
+    text-align:center;
+}
+
+h2 {
+    font-family:'Noto Sans', sans-serif;
+    font-weight:300;
+    font-size:2em;
+}
+
+
+/*---------- classes --------------*/
+
+
+/*portfolio items*/
+    .item-box {
+        margin:1%;
+        border-radius:10px;
+        background-color:#E5E5F8;
+        cursor:pointer;
+        transition:0.5s;
+    }
+
+.item-box:hover {
+    scale:105%;
+}
+
+
+.item-title {
+    text-align: center;
+}
+
+
+/* categories */
+.categories-box {
+    display:flex;
+}
+
+
+.category-box {
+    background-color:#342E65;
+    margin:2%;
+    border-radius:10px;
+    padding:0% 2%;
+
+}
+
+
+.item-category {
+    font-family: 'Raleway', sans-serif;
+    color: #F7F7FF;
+    text-align:center;
+    font-size:small;
+}
+
+
+.item-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit:cover                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+}
+
+.item-desc {
+    padding:2%;
+    font-family:'Raleway' , sans-serif;
+}
+
+
+/*----------- ids ---------------*/
+
+#contentbox {
+    display:flex;
+    flex-wrap:wrap;
+    background-color: #8A89B8;
+    padding:1%;
+    max-width:1170px;
+    margin:auto;
+}
