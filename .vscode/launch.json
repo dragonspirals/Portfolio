@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open portfolio.html",
-            "file": "C:\\Users\\Rahul\\Documents\\Dev\\Dragonspirals\\Portfolio\\portfolio.html"
+            "file": "C:\\Users\\Rahul\\Documents\\GitHub\\Portfolio\\portfolio.html"
         }
     ]
 }

@@ -1,7 +1,7 @@
 
 //content
 const content = [];
-const contentBox = document.getElementById("contentbox")
+const contentBox = document.getElementById("content-box")
 
 
 
@@ -10,7 +10,7 @@ const contentBox = document.getElementById("contentbox")
 /* Details of creating elements:
 
 createElement(elementname) creates an object has variable name:
-[elementname + "var"]
+[elementname where spaces are replaced by underscores]
 
 and the following properties:
 title : elementname [[automatically assigned when object is created ]]
@@ -22,33 +22,23 @@ categories: [category1, category2, ...]
 */
 
 
-// example element 1
-createElement("Portfolio Element");
-Portfolio_Element.link = "https:dragonspirals.co.uk";
-Portfolio_Element.img = "./images/moynme.jpg";
-Portfolio_Element.desc = "emample element description";
-Portfolio_Element.categories = ["category1", "category2", "category3"];
+// portfolio
+createElement("Portfolio");
+Portfolio.link = "https://github.io/portfolio";
+Portfolio.gitHubLink = "https://github.com/dragonspirals/portfolio"
+Portfolio.img = "./images/moynme.jpg";
+Portfolio.desc = "Portfolio page - initially made for my website";
+Portfolio.categories = ["HTML", "CSS", "JavaScript"];
 
-//example element 2
-createElement("Second Item")
-Second_Item.link = "dragonspirals.co.uk";
-Second_Item.img = "./images/moynme.jpg";
-// Second_Item.desc = "Another example element";
-Second_Item.categories = ["category1", "category2"]
+//car game
+createElement("Car Game")
+Car_Game.link = "https://dragonspirals.github.io/Car_Game";
+Car_Game.gitHubLink = "https://github.com/dragonspirals/Car_Game"
+Car_Game.img = "./images/moynme.jpg";
+Car_Game.desc = "A simple car game where a player has to move lanes to avoid obstacles";
+Car_Game.categories = ["HTML", "CSS", "JavaScript"];
 
-//example element 3
-createElement("Third Item")
-Third_Item.link = "dragonspirals.co.uk";
-Third_Item.img = "./images/moynme.jpg";
-Third_Item.desc = "Another example element";
-Third_Item.categories = ["category1", "category2"]
 
-//example element 4
-createElement("Fourth Item")
-Fourth_Item.link = "dragonspirals.co.uk";
-Fourth_Item.img = "./images/moynme.jpg";
-Fourth_Item.desc = "Another example element";
-Fourth_Item.categories = ["category1", "category2"]
 
 
 
@@ -87,7 +77,7 @@ function createElement(elementname){
 function addItems(){
     for (let i = 0; i<content.length; i++) {
 
-        var contentBox = document.getElementById("contentbox");
+        var contentBox = document.getElementById("content-box");
 
 
         //create item box (class=item-box) and item title (class=item-title)
@@ -144,12 +134,48 @@ function addItems(){
 
         /* -------------------------------- add link -------------------------------- */
 
-        itemBox.onclick = function() {
-            window.location.href =  content[i].link;
+        
+
+        // create link 
+        if (content[i].hasOwnProperty("link")) {
+            var linkBox = document.createElement("div");
+            linkBox.classList.add("link-box");
+            var linksBox = document.createElement("div");
+            linksBox.classList.add("links-box")
+            var itemLink = document.createElement("p");
+            var linkText = document.createTextNode("View Page");
+            itemLink.classList.add("item-link")
+            itemLink.appendChild(linkText);
+            linkBox.appendChild(itemLink);
+            linksBox.appendChild(linkBox)
+            itemBox.appendChild(linksBox);
+
+            linkBox.onclick = function() {
+                window.location.href =  content[i].link;
+            }
+            
         }
 
+
+        // create github link 
+        if (content[i].hasOwnProperty("gitHubLink")) {
+            var gitHubLinkBox = document.createElement("div");
+            gitHubLinkBox.classList.add("link-box");
+            var itemGitHubLink = document.createElement("p");
+            var gitHubLinkText = document.createTextNode("View Repository");
+            itemGitHubLink.classList.add("item-link")
+            itemGitHubLink.appendChild(gitHubLinkText);
+            gitHubLinkBox.appendChild(itemGitHubLink);
+            linksBox.appendChild(gitHubLinkBox)
+
+            gitHubLinkBox.onclick = function() {
+                window.location.href =  content[i].gitHubLink;
+            }
+            
+        }
     }
 }
+
 
 
 
