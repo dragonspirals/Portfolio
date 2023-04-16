@@ -37,7 +37,7 @@ html {
     background-image: url("https://dragonspirals.co.uk/wp-content/uploads/2022/12/purpl-scaled.jpg");
     background-size:cover;
     background-attachment: fixed;
-    background-blend-mode:darken;
+    background-blend-mode:multiply;
 }
 
 
