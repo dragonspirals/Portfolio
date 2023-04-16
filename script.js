@@ -5,7 +5,9 @@ const contentBox = document.getElementById("content-box")
 
 
 
-/* ---------------------- Portfolio Items ------------------------*/
+/* -------------------------------------------------------------------------- */
+/*                               Portfolio Items                              */
+/* -------------------------------------------------------------------------- */
 // Put items here
 /* Details of creating elements:
 
@@ -22,28 +24,52 @@ categories: [category1, category2, ...]
 */
 
 
-// portfolio
+/* -------------------------------- portfolio ------------------------------- */
 createElement("Portfolio");
 Portfolio.link = "https://github.io/portfolio";
 Portfolio.gitHubLink = "https://github.com/dragonspirals/portfolio"
-Portfolio.img = "./images/moynme.jpg";
-Portfolio.desc = "Portfolio page - initially made for my website";
+Portfolio.img = "images\\portfolio.png";
+Portfolio.desc = "Portfolio page - initially made for my website, now being used here. 'View Page' will just reload this webpage";
 Portfolio.categories = ["HTML", "CSS", "JavaScript"];
 
-//car game
+
+
+/* -------------------------------- car game -------------------------------- */
 createElement("Car Game")
 Car_Game.link = "https://dragonspirals.github.io/Car_Game";
 Car_Game.gitHubLink = "https://github.com/dragonspirals/Car_Game"
-Car_Game.img = "./images/moynme.jpg";
+Car_Game.img = "images\\car_game.png";
 Car_Game.desc = "A simple car game where a player has to move lanes to avoid obstacles";
 Car_Game.categories = ["HTML", "CSS", "JavaScript"];
 
 
 
+/* ------------------------------ Website Menu ------------------------------ */
+createElement("Menu")
+Menu.link = "https://dragonspirals.github.io/Expanding-Menu";
+Menu.gitHubLink = "https://github.com/dragonspirals/Expanding-Menu"
+Menu.img = "images\\menu.png";
+Menu.desc = "An expandable menu made for my website with animations";
+Menu.categories = ["HTML", "CSS", "JavaScript"];
+
+
+
+/* ------------------------------ Jellyfish Website ------------------------------ */
+createElement("Jellyfish Website")
+Jellyfish_Website.link = "https://dragonspirals.github.io/Jellyfish-Website/";
+Jellyfish_Website.gitHubLink = "https://github.com/dragonspirals/Jellyfishe-Website"
+Jellyfish_Website.img = "images\\jellyfish.png";
+Jellyfish_Website.desc = "A HTML and CSS mini website created for an assignment";
+Jellyfish_Website.categories = ["HTML", "CSS"];
+
 
 
 addItems();
-/* -------------------------------- functions ------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  functions                                 */
+/* -------------------------------------------------------------------------- */
 
 /* ------------------------------- check name ------------------------------- */
 //function that checks if the element already exists in content array
@@ -95,9 +121,12 @@ function addItems(){
         //create image (class=item-image)
         if (content[i].hasOwnProperty("img")){
             var itemImage = document.createElement("img");
+            var itemImageBox = document.createElement("div")
             itemImage.src = content[i].img;
             itemImage.classList.add("item-image")
-            itemBox.appendChild(itemImage);
+            itemImageBox.classList.add("item-image-box")
+            itemBox.appendChild(itemImageBox);
+            itemImageBox.appendChild(itemImage);
         }
         // else ADD A FILLER IMAGE if there is no image set
         
