@@ -1,0 +1,222 @@
+/* -------------------------------------------------------------------------- */
+/*                                  Variables                                 */
+/* -------------------------------------------------------------------------- */
+
+/* --------------------------------- colours -------------------------------- */
+$color-primary: #8A89B8;
+$color-accent: #ff909f;
+$color-dark: #5e5d9e;
+$color-light: #E5E5F8;
+$color-off-white: #F7F7FF;
+
+
+/* ---------------------------------- fonts --------------------------------- */
+$font-primary: "Noto Sans", sans-serif;
+$font-secondary: "Raleway", sans-serif;
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 responsive                                 */
+/* -------------------------------------------------------------------------- */
+
+
+/* ------------------------------- breakpoints ------------------------------ */
+$bp-mobile: 600px;
+$bp-tablet: 900px;
+
+/* --------------------------------- desktop -------------------------------- */
+@media only screen and (min-width: $bp-tablet) {
+    .item-box {
+        width: 31.3%;
+    }
+}
+
+
+/* --------------------------------- tablet --------------------------------- */
+@media only screen and (max-width: $bp-tablet ) and (min-width: bp-mobile) {
+    .item-box {
+        width: 48%;
+    }
+}
+
+
+/* --------------------------------- mobile --------------------------------- */
+@media only screen and (max-width: $bp-mobile) {
+    .item-box {
+        width:98%;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    html                                    */
+/* -------------------------------------------------------------------------- */
+
+
+html {
+    background-color: #5e5d9e;
+    background-image: url("https://dragonspirals.co.uk/wp-content/uploads/2022/12/purpl-scaled.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    background-blend-mode:multiply;
+}
+
+
+h1 {
+    font-family: $font-primary;
+    font-weight:600;
+    text-transform:uppercase;
+    text-align:center;
+}
+
+h2 {
+    font-family:$font-primary;
+    font-weight:300;
+    font-size:2em;
+}
+
+a {
+    text-decoration:inherit;
+    color:inherit;
+}
+
+p {
+    font-family: $font-secondary;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   classes                                  */
+/* -------------------------------------------------------------------------- */
+
+
+/* ----------------------------- portfolio items ---------------------------- */
+.item-box {
+    margin:1%;
+    border-radius:10px;
+    box-shadow: 0px 0px 20px 5px #100c34;
+    background-color: $color-light;                                         
+    cursor:pointer;
+    transition:0.5s;
+}
+
+
+
+.item-title {
+    text-align: center;
+}
+
+
+/* ------------------------------- categories ------------------------------- */
+.categories-box {
+    display:flex;
+}
+
+
+.category-box {
+    background-color: $color-primary;
+    margin:2%;
+    border-radius:10px;
+    padding:2%;
+
+}
+
+.item-category {
+    font-family: $font-secondary;
+    color: $color-off-white;
+    text-align:center;
+    font-size:small;
+    margin:0%;
+}
+
+
+/* ---------------------------------- links --------------------------------- */
+.links-box {
+    display:flex;
+}
+
+
+.link-box {
+    background-color: $color-accent;
+    margin:2%;
+    border-radius:10px;
+    padding:1% 2%;
+    width:100%;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: #8A89B8;
+    };
+}
+
+
+
+.item-link {
+    font-family: 'Raleway', sans-serif;
+    color: #342E65;
+    text-align:center;
+    font-size:small;
+    font-weight:600;
+}
+
+
+
+
+.item-image {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit:cover;
+    opacity:0.7;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
+}
+
+.item-image-box {
+    background-color: #2a0830;
+}
+
+.item-desc {
+    padding:2%;
+}
+
+.space {
+    padding:3%;
+}
+
+
+/*----------- ids ---------------*/
+
+#content-box {
+    display:flex;
+    flex-wrap:wrap;
+    background-color: #342E65;
+    padding:1%;
+    max-width:1170px;
+    margin:auto;
+}
+
+#website-link {
+    background-color: $color-primary;
+    border-radius:10px;
+    text-align:center;
+    transition:0.5s;
+
+
+    &:hover {
+        background-color: $color-accent;
+    }
+}
+
+
+
+#website-link-text {
+    color:white;
+    padding:15px;
+}
+
+#title-box {
+    max-width:1170px;
+    margin:auto;
+    background-color: #E5E5F8;
+    padding:1%;
+}
