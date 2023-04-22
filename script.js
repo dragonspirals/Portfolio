@@ -26,7 +26,7 @@ categories: [category1, category2, ...]
 
 /* -------------------------------- portfolio ------------------------------- */
 createElement("Portfolio");
-Portfolio.link = "https://github.io/portfolio";
+Portfolio.link = "https://dragonspirals.github.io/portfolio";
 Portfolio.gitHubLink = "https://github.com/dragonspirals/portfolio"
 Portfolio.img = "images\\portfolio.png";
 Portfolio.desc = "Portfolio page - initially made for my website, now being used here. 'View Page' will just reload this webpage";
@@ -173,7 +173,7 @@ function addItems(){
             linksBox.classList.add("links-box")
             var itemLink = document.createElement("p");
             var linkText = document.createTextNode("View Page");
-            itemLink.classList.add("item-link")
+            itemLink.classList.add("item-link");
             itemLink.appendChild(linkText);
             linkBox.appendChild(itemLink);
             linksBox.appendChild(linkBox)
@@ -181,6 +181,9 @@ function addItems(){
 
             linkBox.onclick = function() {
                 window.location.href =  content[i].link;
+            }
+            itemBox.onclick = function() {
+                window.location.href = content[i].link;
             }
             
         }

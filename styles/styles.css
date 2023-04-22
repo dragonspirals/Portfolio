@@ -1,0 +1,173 @@
+/* -------------------------------------------------------------------------- */
+/*                                  Variables                                 */
+/* -------------------------------------------------------------------------- */
+/* --------------------------------- colours -------------------------------- */
+/* ---------------------------------- fonts --------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 responsive                                 */
+/* -------------------------------------------------------------------------- */
+/* ------------------------------- breakpoints ------------------------------ */
+/* --------------------------------- desktop -------------------------------- */
+@media only screen and (min-width: 900px) {
+  .item-box {
+    width: 31.3%;
+  }
+}
+/* --------------------------------- tablet --------------------------------- */
+@media only screen and (max-width: 900px) and (min-width: bp-mobile) {
+  .item-box {
+    width: 48%;
+  }
+}
+/* --------------------------------- mobile --------------------------------- */
+@media only screen and (max-width: 600px) {
+  .item-box {
+    width: 98%;
+  }
+}
+/* -------------------------------------------------------------------------- */
+/*                                    html                                    */
+/* -------------------------------------------------------------------------- */
+html {
+  background-color: #5e5d9e;
+  background-image: url("https://dragonspirals.co.uk/wp-content/uploads/2022/12/purpl-scaled.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+}
+
+h1 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   classes                                  */
+/* -------------------------------------------------------------------------- */
+/* ----------------------------- portfolio items ---------------------------- */
+.item-box {
+  margin: 1%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 5px #100c34;
+  background-color: #E5E5F8;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.item-title {
+  text-align: center;
+}
+
+/* ------------------------------- categories ------------------------------- */
+.categories-box {
+  display: flex;
+}
+
+.category-box {
+  background-color: #8A89B8;
+  margin: 2%;
+  border-radius: 10px;
+  padding: 2%;
+}
+
+.item-category {
+  font-family: "Raleway", sans-serif;
+  color: #F7F7FF;
+  text-align: center;
+  font-size: small;
+  margin: 0%;
+}
+
+/* ---------------------------------- links --------------------------------- */
+.links-box {
+  display: flex;
+}
+
+.link-box {
+  background-color: #ff909f;
+  margin: 2%;
+  border-radius: 10px;
+  padding: 1% 2%;
+  width: 100%;
+  transition: 0.5s;
+}
+.link-box:hover {
+  background-color: #8A89B8;
+}
+
+.item-link {
+  font-family: "Raleway", sans-serif;
+  color: #342E65;
+  text-align: center;
+  font-size: small;
+  font-weight: 600;
+}
+
+.item-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.7;
+}
+
+.item-image-box {
+  background-color: #2a0830;
+}
+
+.item-desc {
+  padding: 2%;
+}
+
+.space {
+  padding: 3%;
+}
+
+/*----------- ids ---------------*/
+#content-box {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #342E65;
+  padding: 1%;
+  max-width: 1170px;
+  margin: auto;
+}
+
+#website-link {
+  background-color: #8A89B8;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.5s;
+}
+#website-link:hover {
+  background-color: #ff909f;
+}
+
+#website-link-text {
+  color: white;
+  padding: 15px;
+}
+
+#title-box {
+  max-width: 1170px;
+  margin: auto;
+  background-color: #E5E5F8;
+  padding: 1%;
+}/*# sourceMappingURL=styles.css.map */
