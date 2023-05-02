@@ -23,6 +23,18 @@ categories: [category1, category2, ...]
 }
 */
 
+/* -------------------------------------------------------------------------- */
+/*                                   Modules                                  */
+/* -------------------------------------------------------------------------- */
+
+/* ----------------------------- Gallery module ----------------------------- */
+createElement("Gallery");
+Gallery.link = "https://dragonspirals.github.io/Modules/gallery.html";
+Gallery.gitHubLink = "https://github.com/dragonspirals/Modules"
+Gallery.img = "images\\gallery.png";
+Gallery.desc = "JS module which displays a carousel of images with navigation elements";
+Gallery.categories = ["HTML", "CSS", "JavaScript", "JS Module", "SCSS"];
+
 
 /* -------------------------------- portfolio ------------------------------- */
 createElement("Portfolio");
