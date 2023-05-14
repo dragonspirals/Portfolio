@@ -27,6 +27,13 @@ categories: [category1, category2, ...]
 /*                                   Modules                                  */
 /* -------------------------------------------------------------------------- */
 
+/* ---------------------------- React to do list ---------------------------- */
+createElement("React ToDo");
+React_ToDo.gitHubLink = "https://github.com/dragonspirals/React-To-Do-List";
+React_ToDo.img = "images\\react_to_do_list.png";
+React_ToDo.desc = "A to-do list created in react - ongoing project";
+React_ToDo.categories = ["React JS", "JavaScript", "CSS", "SCSS"];
+
 /* ----------------------------- Gallery module ----------------------------- */
 createElement("Gallery");
 Gallery.link = "https://dragonspirals.github.io/Modules/gallery.html";
@@ -177,47 +184,61 @@ function addItems(){
 
         
 
-        // create link 
-        if (content[i].hasOwnProperty("link")) {
-            var linkBox = document.createElement("div");
-            linkBox.classList.add("link-box");
+        if (content[i].hasOwnProperty("link") || content[i].hasOwnProperty("gitHubLink")){
             var linksBox = document.createElement("div");
-            linksBox.classList.add("links-box")
-            var itemLink = document.createElement("p");
-            var linkText = document.createTextNode("View Page");
-            itemLink.classList.add("item-link");
-            itemLink.appendChild(linkText);
-            linkBox.appendChild(itemLink);
-            linksBox.appendChild(linkBox)
+            linksBox.classList.add("links-box");
             itemBox.appendChild(linksBox);
 
-            linkBox.onclick = function() {
-                window.location.href =  content[i].link;
+            // github pages link
+            if (content[i].hasOwnProperty("link")) {
+                var linkBox = document.createElement("div");
+                linkBox.classList.add("link-box");
+                
+                var itemLink = document.createElement("p");
+                var linkText = document.createTextNode("View Page");
+                itemLink.classList.add("item-link");
+                itemLink.appendChild(linkText);
+                linkBox.appendChild(itemLink);
+                linksBox.appendChild(linkBox)
+                
+    
+                linkBox.onclick = function() {
+                    window.location.href =  content[i].link;
+                }
+                itemBox.onclick = function() {
+                    window.location.href = content[i].link;
+                }
+                
             }
-            itemBox.onclick = function() {
-                window.location.href = content[i].link;
+
+            // github repo link
+            if (content[i].hasOwnProperty("gitHubLink")) {
+                var gitHubLinkBox = document.createElement("div");
+                gitHubLinkBox.classList.add("link-box");
+                var itemGitHubLink = document.createElement("p");
+                var gitHubLinkText = document.createTextNode("View Repository");
+                itemGitHubLink.classList.add("item-link")
+                itemGitHubLink.appendChild(gitHubLinkText);
+                gitHubLinkBox.appendChild(itemGitHubLink);
+                linksBox.appendChild(gitHubLinkBox)
+    
+                gitHubLinkBox.onclick = function() {
+                    window.location.href =  content[i].gitHubLink;
+                }
+                
             }
-            
         }
 
 
-        // create github link 
-        if (content[i].hasOwnProperty("gitHubLink")) {
-            var gitHubLinkBox = document.createElement("div");
-            gitHubLinkBox.classList.add("link-box");
-            var itemGitHubLink = document.createElement("p");
-            var gitHubLinkText = document.createTextNode("View Repository");
-            itemGitHubLink.classList.add("item-link")
-            itemGitHubLink.appendChild(gitHubLinkText);
-            gitHubLinkBox.appendChild(itemGitHubLink);
-            linksBox.appendChild(gitHubLinkBox)
-
-            gitHubLinkBox.onclick = function() {
-                window.location.href =  content[i].gitHubLink;
-            }
-            
-        }
+             // create github link 
+        
     }
+
+        
+
+
+       
+    
 }
 
 
