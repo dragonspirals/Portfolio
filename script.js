@@ -27,6 +27,12 @@ categories: [category1, category2, ...]
 /*                                   Modules                                  */
 /* -------------------------------------------------------------------------- */
 
+createElement("Password Strength");
+Password_Strength.gitHubLink = "https://github.com/dragonspirals/Password-Strength";
+Password_Strength.img = "images\\password_strength.png"
+Password_Strength.desc = "Checks the Strength of a password"
+Password_Strength.categories = ["Python"]
+
 /* ---------------------------- React to do list ---------------------------- */
 createElement("React ToDo");
 React_ToDo.gitHubLink = "https://github.com/dragonspirals/React-To-Do-List";
@@ -208,8 +214,16 @@ function addItems(){
                 itemBox.onclick = function() {
                     window.location.href = content[i].link;
                 }
+
+                itemBox.classList.add("clickable")
                 
-            }
+            } else if (content[i].hasOwnProperty("gitHubLink")) {
+                itemBox.onclick = function() {
+                    window.location.href = content[i].gitHubLink;
+                }
+
+                itemBox.classList.add("clickable")
+            } 
 
             // github repo link
             if (content[i].hasOwnProperty("gitHubLink")) {

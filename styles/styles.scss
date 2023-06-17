@@ -97,8 +97,7 @@ p {
     margin:1%;
     border-radius:10px;
     box-shadow: 0px 0px 20px 5px #100c34;
-    background-color: $color-light;                                         
-    cursor:pointer;
+    background-color: $color-light;    
     transition:0.5s;
 }
 
@@ -181,6 +180,10 @@ p {
 
 .space {
     padding:3%;
+}
+
+.clickable {
+    cursor: pointer;
 }
 
 

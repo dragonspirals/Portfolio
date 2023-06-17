@@ -67,7 +67,6 @@ p {
   border-radius: 10px;
   box-shadow: 0px 0px 20px 5px #100c34;
   background-color: #E5E5F8;
-  cursor: pointer;
   transition: 0.5s;
 }
 
@@ -138,6 +137,10 @@ p {
 
 .space {
   padding: 3%;
+}
+
+.clickable {
+  cursor: pointer;
 }
 
 /*----------- ids ---------------*/
